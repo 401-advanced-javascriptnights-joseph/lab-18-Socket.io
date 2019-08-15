@@ -11,8 +11,8 @@ const socket = io.connect('http://209.210.157.165:3000');
 
 socket.on('file-save', (payload) => {
   console.log(`${payload} was saved`);
+});
 
 socket.on('file-error', (payload) => {
   console.log(`Error`);
-})
 });
