@@ -14,32 +14,27 @@
 * [styleguide](http://xyz.com) (React assignments)
 
 ### Modules
-#### `app.js`
+#### `app.js` - File Reading/Writing/Uppercasing (promises)
+#### `logger.js` - Listens for file-save and file-error events
+#### `server.js` - emits() the appropriate event and payload to clients
 
 ##### Exported Values and Methods
+###### `loadFile(file) -> readFile`
+###### `saveFile(file, buffer) -> writeFile`
+###### `convertBuffer(buffer) -> toString, toUppercase`
 
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT` - 3000
+* `https://socket.io/docs/emit-cheatsheet/` - cheatsheet for socket.io commands
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* `curl ifconfig.me` to obtain IP address for windows
+* `node app.js 'files/test.txt'` - to run read/write fs
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* `npm test`
 
 #### UML
 Link to an image of the UML for your application and response to events
